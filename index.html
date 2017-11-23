@@ -4,10 +4,11 @@
 	<head>
 		<title> Tibao da Depressao </title>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
 	</head>
 		
-	<body>
-		<header>
+	<body class = "fundo">
+		<header class = "cabecalho">
 
 			<h1> Tibao da Depressao </h1>
 			<p> Esse blog tem o intuito de trazer topicos e assuntos engraçados a respeito do jogo Tibia </p>
@@ -23,7 +24,7 @@
 		
 		<aside>
 			<nav>
-				<ul>
+				<ul class = "textolink">
 					<li><a href = "https://www.tibiabr.com/"> Outro Artigo 1</a href></li>
 					<li><a href = "https://www.tibiabr.com/"> Outro Artigo 2</a href></li>
 				</ul>
@@ -45,7 +46,7 @@
 		<br />
 		<hr />
 		<br />
-		<article>
+		<article class="artigo">
 			<header>
 				<h2><strong>Joaozinho</strong></h2>	
 			</header>
@@ -58,7 +59,34 @@
 					<li><a href = "">Kill</a></li>
 					<li><a href = "">Quest</a></li>
 			<br />
-			
+			<script>
+		        function incrementaValor(valorMaximo){
+		            var value = parseInt(document.getElementById('resultado').value,10);
+		            value = isNaN(value) ? 0 : value;
+		            if(value >= valorMaximo) {
+		                value = valorMaximo;
+		            }else{
+		                value++;
+		            }
+		            document.getElementById('resultado').value = value;
+		        }
+		        function decrementaValor(valorMinimo){
+		            var value = parseInt(document.getElementById('resultado').value,10);
+		            value = isNaN(value) ? 0 : value;
+		            if(value <= valorMinimo) {
+		                value = 0;
+		            }else{
+		                value--;
+		            }
+		            document.getElementById('resultado').value = value;
+		        }
+		    </script>
+					<div>
+						<a href="#" onclick="incrementaValor(10);return false;">Like</a>
+						<input class="label" name="resultado" id="resultado" value="0">
+						<a href="#" onclick="decrementaValor(0); return false;">Deslike</a>
+
+					</div>
 			
 			<footer>
 				<section>
@@ -146,7 +174,7 @@
 		
 		</article>
 		
-		<footer>
+		<footer class = "footer">
 		<p> Proprietario Bitz</p>
 		<p> Email para contato : tibaodepressao@gmail.com</p>
 		<time datetime=”2017-09-20">20/9/2017</time>
